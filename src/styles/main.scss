@@ -1,0 +1,28 @@
+@import './variables';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #14162d;
+}
+
+* {
+    font-family: 'Barlow';
+}
+
+.container {
+    width: 1200px;
+
+    @include lg {
+        width: 1200px;
+    }
+
+    @include md {
+        width: 100%;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}

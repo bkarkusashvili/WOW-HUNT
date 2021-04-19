@@ -1,0 +1,16 @@
+<section class="container">
+  <app-headline title="OUR SERVICE"></app-headline>
+  <div class="list">
+    <div class="item" *ngFor="let item of list">
+      <div class="media">
+        <img [src]="item.image.main | imageSource: 'home'" alt="" />
+        <img [src]="item.image.over | imageSource: 'home'" alt="" />
+      </div>
+      <div class="content">
+        <span *ngIf="item.pre">{{ item.pre }}</span>
+        <h3>{{ item.title }}</h3>
+        <a [routerLink]="item.link">OPEN</a>
+      </div>
+    </div>
+  </div>
+</section>

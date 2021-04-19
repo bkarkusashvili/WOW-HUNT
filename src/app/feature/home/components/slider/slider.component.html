@@ -1,0 +1,21 @@
+<swiper
+  [slidesPerView]="1"
+  [autoHeight]="true"
+  [pagination]="{
+    type: 'bullets',
+    el: '.navigation'
+  }"
+>
+  <ng-template *ngFor="let slide of slides" let-data swiperSlide>
+    <div class="item">
+      <div class="content">
+        <div class="container">
+          <h3>{{ slide.title }}</h3>
+          <p>{{ slide.text }}</p>
+          <a [routerLink]="slide.link">LEARN MORE</a>
+        </div>
+      </div>
+      <img [src]="slide.image | imageSource: 'home'" alt="" />
+    </div>
+  </ng-template>
+</swiper>
